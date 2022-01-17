@@ -172,32 +172,32 @@ libr/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/libr.dir/build.make CMakeFiles/libr.dir/build
 .PHONY : libr/fast
 
-library.o: library.cpp.o
+hello.o: hello.cpp.o
 
-.PHONY : library.o
+.PHONY : hello.o
 
 # target to build an object file
-library.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libr.dir/build.make CMakeFiles/libr.dir/library.cpp.o
-.PHONY : library.cpp.o
+hello.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libr.dir/build.make CMakeFiles/libr.dir/hello.cpp.o
+.PHONY : hello.cpp.o
 
-library.i: library.cpp.i
+hello.i: hello.cpp.i
 
-.PHONY : library.i
+.PHONY : hello.i
 
 # target to preprocess a source file
-library.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libr.dir/build.make CMakeFiles/libr.dir/library.cpp.i
-.PHONY : library.cpp.i
+hello.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libr.dir/build.make CMakeFiles/libr.dir/hello.cpp.i
+.PHONY : hello.cpp.i
 
-library.s: library.cpp.s
+hello.s: hello.cpp.s
 
-.PHONY : library.s
+.PHONY : hello.s
 
 # target to generate assembly for a file
-library.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libr.dir/build.make CMakeFiles/libr.dir/library.cpp.s
-.PHONY : library.cpp.s
+hello.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libr.dir/build.make CMakeFiles/libr.dir/hello.cpp.s
+.PHONY : hello.cpp.s
 
 # Help Target
 help:
@@ -212,9 +212,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... install/local"
 	@echo "... install"
-	@echo "... library.o"
-	@echo "... library.i"
-	@echo "... library.s"
+	@echo "... hello.o"
+	@echo "... hello.i"
+	@echo "... hello.s"
 .PHONY : help
 
 

@@ -60,27 +60,27 @@ include CMakeFiles/libr.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/libr.dir/flags.make
 
-CMakeFiles/libr.dir/library.cpp.o: CMakeFiles/libr.dir/flags.make
-CMakeFiles/libr.dir/library.cpp.o: ../library.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gw/lixiaoning/package/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/libr.dir/library.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/libr.dir/library.cpp.o -c /home/gw/lixiaoning/package/library.cpp
+CMakeFiles/libr.dir/hello.cpp.o: CMakeFiles/libr.dir/flags.make
+CMakeFiles/libr.dir/hello.cpp.o: ../hello.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gw/lixiaoning/package/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/libr.dir/hello.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/libr.dir/hello.cpp.o -c /home/gw/lixiaoning/package/hello.cpp
 
-CMakeFiles/libr.dir/library.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libr.dir/library.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gw/lixiaoning/package/library.cpp > CMakeFiles/libr.dir/library.cpp.i
+CMakeFiles/libr.dir/hello.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libr.dir/hello.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gw/lixiaoning/package/hello.cpp > CMakeFiles/libr.dir/hello.cpp.i
 
-CMakeFiles/libr.dir/library.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libr.dir/library.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gw/lixiaoning/package/library.cpp -o CMakeFiles/libr.dir/library.cpp.s
+CMakeFiles/libr.dir/hello.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libr.dir/hello.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gw/lixiaoning/package/hello.cpp -o CMakeFiles/libr.dir/hello.cpp.s
 
 # Object files for target libr
 libr_OBJECTS = \
-"CMakeFiles/libr.dir/library.cpp.o"
+"CMakeFiles/libr.dir/hello.cpp.o"
 
 # External object files for target libr
 libr_EXTERNAL_OBJECTS =
 
-liblibr.so: CMakeFiles/libr.dir/library.cpp.o
+liblibr.so: CMakeFiles/libr.dir/hello.cpp.o
 liblibr.so: CMakeFiles/libr.dir/build.make
 liblibr.so: CMakeFiles/libr.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gw/lixiaoning/package/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library liblibr.so"
