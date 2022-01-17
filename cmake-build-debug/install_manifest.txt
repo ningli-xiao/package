@@ -1,0 +1,2 @@
+/usr/local/lib/liblibr.so
+/usr/local/include/library.h

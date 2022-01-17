@@ -1,3 +1,7 @@
-/tmp/tmp.MgOePek7XU/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/tmp/tmp.MgOePek7XU/cmake-build-debug/CMakeFiles/libr.dir
-/tmp/tmp.MgOePek7XU/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/gw/lixiaoning/package/cmake-build-debug/CMakeFiles/install/strip.dir
+/home/gw/lixiaoning/package/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/gw/lixiaoning/package/cmake-build-debug/CMakeFiles/libr.dir
+/home/gw/lixiaoning/package/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/gw/lixiaoning/package/cmake-build-debug/CMakeFiles/list_install_components.dir
+/home/gw/lixiaoning/package/cmake-build-debug/CMakeFiles/install/local.dir
+/home/gw/lixiaoning/package/cmake-build-debug/CMakeFiles/install.dir

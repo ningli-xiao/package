@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/tmp/tmp.MgOePek7XU/library.cpp" "/tmp/tmp.MgOePek7XU/cmake-build-debug/CMakeFiles/libr.dir/library.cpp.o"
+  "/home/gw/lixiaoning/package/library.cpp" "/home/gw/lixiaoning/package/cmake-build-debug/CMakeFiles/libr.dir/library.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
