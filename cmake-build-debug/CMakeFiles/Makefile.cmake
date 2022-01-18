@@ -12,7 +12,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.6/CMakeSystem.cmake"
   "../cmake/ide.cmake"
   "../cmake/ning.pc.in"
-  "../cmake/ningCPack.cmake"
   "../cmake/ningConfig.cmake.in"
   "../cmake/utils.cmake"
   "/usr/local/share/cmake-3.16/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"
@@ -27,8 +26,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.16/Modules/CMakePackageConfigHelpers.cmake"
   "/usr/local/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/local/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/usr/local/share/cmake-3.16/Modules/CPack.cmake"
-  "/usr/local/share/cmake-3.16/Modules/CPackComponent.cmake"
   "/usr/local/share/cmake-3.16/Modules/CheckCXXSourceCompiles.cmake"
   "/usr/local/share/cmake-3.16/Modules/CheckIncludeFileCXX.cmake"
   "/usr/local/share/cmake-3.16/Modules/CheckLibraryExists.cmake"
@@ -46,7 +43,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.16/Modules/Platform/UnixPaths.cmake"
   "/usr/local/share/cmake-3.16/Modules/ProcessorCount.cmake"
   "/usr/local/share/cmake-3.16/Modules/WriteBasicConfigVersionFile.cmake"
-  "/usr/local/share/cmake-3.16/Templates/CPackConfig.cmake.in"
   )
 
 # The corresponding makefile is:
@@ -60,8 +56,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "ning.pc"
   "ningConfig.cmake"
   "ningConfigVersion.cmake"
-  "CPackConfig.cmake"
-  "CPackSourceConfig.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
