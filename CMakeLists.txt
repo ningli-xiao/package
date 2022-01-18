@@ -15,7 +15,9 @@ project(ning VERSION ${NING_VERSION} LANGUAGES CXX)
 message(STATUS "Build ning: ${NING_VERSION}")
 
 include(GNUInstallDirs)
+
 include_directories(
+        src/
         include/
 )
 
@@ -89,6 +91,7 @@ add_library(ning STATIC ${NING_SRCS} ${NING_ALL_HEADERS})
 add_library(ning::ning ALIAS ning)
 
 target_include_directories(ning PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/include>"
+        "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/src>"
         "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>")
 target_link_libraries(ning PUBLIC Threads::Threads)
 
