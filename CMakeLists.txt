@@ -16,7 +16,6 @@ message(STATUS "Build ning: ${NING_VERSION}")
 include(GNUInstallDirs)
 
 include_directories(
-        src/
         include/
 )
 # ---------------------------------------------------------------------------------------
