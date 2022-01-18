@@ -1,5 +1,4 @@
-#include "src/hello.h"
-
+#include "hello.h"
 #include <iostream>
 
 void hello() {
