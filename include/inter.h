@@ -4,5 +4,6 @@
 
 #ifndef LIBR_INTER_H
 #define LIBR_INTER_H
-#include "src/hello.h"
+
+#include "hello.h"
 #endif //LIBR_INTER_H

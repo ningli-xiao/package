@@ -1,9 +1,9 @@
 # ---------------------------------------------------------------------------------------
 # IDE support for headers
 # ---------------------------------------------------------------------------------------
-set(NING_HEADERS_DIR "${CMAKE_CURRENT_LIST_DIR}/../include")
-
-file(GLOB NING_TOP_HEADERS "${NING_HEADERS_DIR}/*.h")
+file(GLOB NING_TOP_HEADERS "${CMAKE_CURRENT_LIST_DIR}/../include/*.h"
+        "${CMAKE_CURRENT_LIST_DIR}/../src/*.h"
+)
 
 set(NING_ALL_HEADERS ${NING_TOP_HEADERS} )
 
