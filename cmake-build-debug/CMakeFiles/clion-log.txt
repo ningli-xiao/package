@@ -1,4 +1,7 @@
 /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/gw/lixiaoning/package
+-- Build ning: 1.9.2
+-- Build type: Debug
+-- Generating install
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/gw/lixiaoning/package/cmake-build-debug

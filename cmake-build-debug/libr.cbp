@@ -126,10 +126,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/gw/lixiaoning/package/hello.cpp">
+		<Unit filename="/home/gw/lixiaoning/package/include/inter.h">
 			<Option target="libr"/>
 		</Unit>
-		<Unit filename="/home/gw/lixiaoning/package/hello.h">
+		<Unit filename="/home/gw/lixiaoning/package/include/ning/version.h">
+			<Option target="libr"/>
+		</Unit>
+		<Unit filename="/home/gw/lixiaoning/package/src/hello.cpp">
+			<Option target="libr"/>
+		</Unit>
+		<Unit filename="/home/gw/lixiaoning/package/src/hello.h">
 			<Option target="libr"/>
 		</Unit>
 		<Unit filename="/home/gw/lixiaoning/package/CMakeLists.txt">

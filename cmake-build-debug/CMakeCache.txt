@@ -205,25 +205,25 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_DESCRIPTION:STATIC=mylib description
+CMAKE_PROJECT_DESCRIPTION:STATIC=
 
 //Value Computed by CMake
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=libr
+CMAKE_PROJECT_NAME:STATIC=ning
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=1.0.1
+CMAKE_PROJECT_VERSION:STATIC=1.9.2
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=1
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=0
+CMAKE_PROJECT_VERSION_MINOR:STATIC=9
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=1
+CMAKE_PROJECT_VERSION_PATCH:STATIC=2
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -290,11 +290,112 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Semicolon separated list of generators
+CPACK_GENERATOR:STRING=TGZ;ZIP
+
+//Build relocatable package
+CPACK_PACKAGE_RELOCATABLE:BOOL=ON
+
+//Enable to build RPM source packages
+CPACK_SOURCE_RPM:BOOL=OFF
+
+//Enable to build TBZ2 source packages
+CPACK_SOURCE_TBZ2:BOOL=ON
+
+//Enable to build TGZ source packages
+CPACK_SOURCE_TGZ:BOOL=ON
+
+//Enable to build TXZ source packages
+CPACK_SOURCE_TXZ:BOOL=ON
+
+//Enable to build TZ source packages
+CPACK_SOURCE_TZ:BOOL=ON
+
+//Enable to build ZIP source packages
+CPACK_SOURCE_ZIP:BOOL=OFF
+
 //Single output directory for building all executables.
 EXECUTABLE_OUTPUT_PATH:PATH=
 
 //Single output directory for building all libraries.
 LIBRARY_OUTPUT_PATH:PATH=
+
+//Build all artifacts
+NING_BUILD_ALL:BOOL=OFF
+
+//Build benchmarks (Requires https://github.com/google/benchmark.git
+// to be installed)
+NING_BUILD_BENCH:BOOL=OFF
+
+//Build example
+NING_BUILD_EXAMPLE:BOOL=ON
+
+//Build header only example
+NING_BUILD_EXAMPLE_HO:BOOL=OFF
+
+//Build shared library
+NING_BUILD_SHARED:BOOL=OFF
+
+//Build tests
+NING_BUILD_TESTS:BOOL=OFF
+
+//Build tests using the header only version
+NING_BUILD_TESTS_HO:BOOL=OFF
+
+//Enable compiler warnings
+NING_BUILD_WARNINGS:BOOL=OFF
+
+//Use CLOCK_REALTIME_COARSE instead of the regular clock,
+NING_CLOCK_COARSE:BOOL=OFF
+
+//Disable default logger creation
+NING_DISABLE_DEFAULT_LOGGER:BOOL=OFF
+
+//Build static or shared library using precompiled header to speed
+// up compilation time
+NING_ENABLE_PCH:BOOL=OFF
+
+//Use external fmt library instead of bundled
+NING_FMT_EXTERNAL:BOOL=OFF
+
+//Use external fmt header-only library instead of bundled
+NING_FMT_EXTERNAL_HO:BOOL=OFF
+
+//Generate the install target
+NING_INSTALL:BOOL=ON
+
+//prevent ning from using of std::atomic log levels (use only if
+// your code never modifies log levels concurrently
+NING_NO_ATOMIC_LEVELS:BOOL=OFF
+
+//Compile with -fno-exceptions. Call abort() on any ning exceptions
+NING_NO_EXCEPTIONS:BOOL=OFF
+
+//prevent ning from querying the thread id on each log call if
+// thread id is not needed
+NING_NO_THREAD_ID:BOOL=OFF
+
+//prevent ning from using thread local storage
+NING_NO_TLS:BOOL=OFF
+
+//Prevent from child processes to inherit log file descriptors
+NING_PREVENT_CHILD_FD:BOOL=OFF
+
+//Enable address sanitizer in tests
+NING_SANITIZE_ADDRESS:BOOL=OFF
+
+//run clang-tidy
+NING_TIDY:BOOL=OFF
+
+//Use std::format instead of fmt library. No compile-time format
+// string checking.
+NING_USE_STD_FORMAT:BOOL=OFF
+
+//non supported option
+NING_WCHAR_FILENAMES:BOOL=OFF
+
+//non supported option
+NING_WCHAR_SUPPORT:BOOL=OFF
 
 //Path to a program.
 ProcessorCount_cmd_nproc:FILEPATH=/usr/bin/nproc
@@ -319,6 +420,12 @@ libr_BINARY_DIR:STATIC=/home/gw/lixiaoning/package/cmake-build-debug
 
 //Value Computed by CMake
 libr_SOURCE_DIR:STATIC=/home/gw/lixiaoning/package
+
+//Value Computed by CMake
+ning_BINARY_DIR:STATIC=/home/gw/lixiaoning/package/cmake-build-debug
+
+//Value Computed by CMake
+ning_SOURCE_DIR:STATIC=/home/gw/lixiaoning/package
 
 
 ########################
@@ -411,6 +518,14 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=
+//Have library pthreads
+CMAKE_HAVE_PTHREADS_CREATE:INTERNAL=
+//Have library pthread
+CMAKE_HAVE_PTHREAD_CREATE:INTERNAL=1
+//Have include pthread.h
+CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/gw/lixiaoning/package
@@ -508,6 +623,20 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_RPM
+CPACK_SOURCE_RPM-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TBZ2
+CPACK_SOURCE_TBZ2-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TGZ
+CPACK_SOURCE_TGZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TXZ
+CPACK_SOURCE_TXZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TZ
+CPACK_SOURCE_TZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_ZIP
+CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: ProcessorCount_cmd_nproc
 ProcessorCount_cmd_nproc-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_sysctl

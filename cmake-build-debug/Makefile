@@ -71,6 +71,52 @@ install/strip/fast: preinstall/fast
 	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	/usr/local/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	/usr/local/bin/cpack --config ./CPackSourceConfig.cmake /home/gw/lixiaoning/package/cmake-build-debug/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+
+.PHONY : package_source/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -102,30 +148,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -160,44 +182,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named libr
+# Target rules for targets named ning
 
 # Build rule for target.
-libr: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libr
-.PHONY : libr
+ning: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ning
+.PHONY : ning
 
 # fast build rule for target.
-libr/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libr.dir/build.make CMakeFiles/libr.dir/build
-.PHONY : libr/fast
+ning/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ning.dir/build.make CMakeFiles/ning.dir/build
+.PHONY : ning/fast
 
-hello.o: hello.cpp.o
+src/hello.o: src/hello.cpp.o
 
-.PHONY : hello.o
+.PHONY : src/hello.o
 
 # target to build an object file
-hello.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libr.dir/build.make CMakeFiles/libr.dir/hello.cpp.o
-.PHONY : hello.cpp.o
+src/hello.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ning.dir/build.make CMakeFiles/ning.dir/src/hello.cpp.o
+.PHONY : src/hello.cpp.o
 
-hello.i: hello.cpp.i
+src/hello.i: src/hello.cpp.i
 
-.PHONY : hello.i
+.PHONY : src/hello.i
 
 # target to preprocess a source file
-hello.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libr.dir/build.make CMakeFiles/libr.dir/hello.cpp.i
-.PHONY : hello.cpp.i
+src/hello.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ning.dir/build.make CMakeFiles/ning.dir/src/hello.cpp.i
+.PHONY : src/hello.cpp.i
 
-hello.s: hello.cpp.s
+src/hello.s: src/hello.cpp.s
 
-.PHONY : hello.s
+.PHONY : src/hello.s
 
 # target to generate assembly for a file
-hello.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libr.dir/build.make CMakeFiles/libr.dir/hello.cpp.s
-.PHONY : hello.cpp.s
+src/hello.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ning.dir/build.make CMakeFiles/ning.dir/src/hello.cpp.s
+.PHONY : src/hello.cpp.s
 
 # Help Target
 help:
@@ -206,15 +228,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... edit_cache"
-	@echo "... libr"
-	@echo "... rebuild_cache"
-	@echo "... list_install_components"
 	@echo "... install/local"
 	@echo "... install"
-	@echo "... hello.o"
-	@echo "... hello.i"
-	@echo "... hello.s"
+	@echo "... package"
+	@echo "... package_source"
+	@echo "... ning"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... list_install_components"
+	@echo "... src/hello.o"
+	@echo "... src/hello.i"
+	@echo "... src/hello.s"
 .PHONY : help
 
 
