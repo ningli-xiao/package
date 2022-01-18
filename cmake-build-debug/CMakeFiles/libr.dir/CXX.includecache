@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/tmp/tmp.MgOePek7XU/library.cpp
-library.h
-/tmp/tmp.MgOePek7XU/library.h
+/home/gw/lixiaoning/package/hello.cpp
+hello.h
+/home/gw/lixiaoning/package/hello.h
 iostream
 -
 
-/tmp/tmp.MgOePek7XU/library.h
+/home/gw/lixiaoning/package/hello.h
 

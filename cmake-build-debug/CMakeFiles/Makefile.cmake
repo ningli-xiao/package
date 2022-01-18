@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.6/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.6/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.6/CMakeSystem.cmake"
+  "../libr.pc.in"
   "/usr/local/share/cmake-3.16/Modules/CMakeCInformation.cmake"
   "/usr/local/share/cmake-3.16/Modules/CMakeCXXInformation.cmake"
   "/usr/local/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -20,13 +21,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.16/Modules/CMakeGenericSystem.cmake"
   "/usr/local/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake"
   "/usr/local/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake"
-  "/usr/local/share/cmake-3.16/Modules/CMakePackageConfigHelpers.cmake"
   "/usr/local/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/local/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake"
   "/usr/local/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/usr/local/share/cmake-3.16/Modules/Compiler/GNU-C.cmake"
   "/usr/local/share/cmake-3.16/Modules/Compiler/GNU-CXX.cmake"
   "/usr/local/share/cmake-3.16/Modules/Compiler/GNU.cmake"
+  "/usr/local/share/cmake-3.16/Modules/GNUInstallDirs.cmake"
   "/usr/local/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/usr/local/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/local/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake"
@@ -34,7 +35,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.16/Modules/Platform/Linux.cmake"
   "/usr/local/share/cmake-3.16/Modules/Platform/UnixPaths.cmake"
   "/usr/local/share/cmake-3.16/Modules/ProcessorCount.cmake"
-  "/usr/local/share/cmake-3.16/Modules/WriteBasicConfigVersionFile.cmake"
   )
 
 # The corresponding makefile is:
@@ -45,6 +45,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "libr.pc"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
